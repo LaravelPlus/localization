@@ -1,0 +1,49 @@
+{
+    "name": "laravelplus/localization",
+    "description": "Multi-language localization package for Laravel with database-driven translations, content translation traits, and admin UI.",
+    "keywords": ["laravel", "localization", "translations", "i18n", "multi-language"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LaravelPlus",
+            "email": "info@laravelplus.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "illuminate/support": "^12.0",
+        "illuminate/database": "^12.0",
+        "illuminate/http": "^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelPlus\\Localization\\": "src/",
+            "LaravelPlus\\Localization\\Database\\Factories\\": "database/factories/",
+            "LaravelPlus\\Localization\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelPlus\\Localization\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelPlus\\Localization\\LocalizationServiceProvider"
+            ],
+            "aliases": {
+                "Localization": "LaravelPlus\\Localization\\Facades\\Localization"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
