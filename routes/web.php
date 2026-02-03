@@ -11,6 +11,6 @@ use LaravelPlus\Localization\Http\Controllers\LocaleSwitchController;
 |--------------------------------------------------------------------------
 */
 
-Route::middleware(['web', 'auth'])
+Route::middleware(['web'])
     ->post('/locale/{code}', LocaleSwitchController::class)
     ->name('locale.switch');
